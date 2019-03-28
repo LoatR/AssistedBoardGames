@@ -19,8 +19,8 @@ public class ChessMoveEntity {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id_move;
 	
-	private String  from ;
-	private String  to ; 
+	private String  squareFrom ;
+	private String  squareTo ; 
 	
 	@ManyToOne
 	private ChessStateEntity state;
@@ -28,8 +28,8 @@ public class ChessMoveEntity {
 	public ChessMoveEntity() {
 	}
 	public ChessMoveEntity(String from, String to) {
-		this.from=from;
-		this.to=to;
+		this.squareFrom=from;
+		this.squareTo=to;
 	}
 	
 	public int getId_move() {
@@ -37,19 +37,19 @@ public class ChessMoveEntity {
 	} 
 
 	public String getFrom() {
-		return from ;
+		return squareFrom ;
 	}
 	
 	public String getTo() {
-		return to ;
+		return squareTo ;
 	}
 	
 	public void setFrom(String from) {
-		this.from = from ;
+		this.squareFrom = from ;
 	}
 	
 	public void setTo(String to) {
-		this.to = to ;
+		this.squareTo = to ;
 	}
 	public void setState(ChessStateEntity state) {
 		this.state=state;

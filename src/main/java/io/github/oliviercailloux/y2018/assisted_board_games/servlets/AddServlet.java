@@ -40,7 +40,7 @@ public class AddServlet {
 
 	@Inject
 	private ChessService chessS;
-
+/**
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.TEXT_PLAIN)
@@ -105,5 +105,5 @@ public class AddServlet {
 						.entity("game : " + idGame + " state : " + newState.getId()).build();
 			}
 		}
-	}
+	}**/
 }

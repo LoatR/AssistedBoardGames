@@ -17,8 +17,8 @@ import javax.persistence.OneToMany;
  */
 @Entity
 @NamedQueries({
-	@NamedQuery(name="ChessGameEntity.find", query="SELECT c FROM ChessGameEntity c WHERE c.id = :id"),		
-	@NamedQuery(name="ChessStateEntity.getLastGame", query="SELECT c FROM ChessGameEntity c WHERE c.id = (SELECT MAX(c.id) FROM ChessGameEntity c") 
+	@NamedQuery(name="ChessGameEntity.find", query="SELECT c FROM ChessGameEntity c WHERE c.id = :id")		
+	/**	@NamedQuery(name="ChessStateEntity.getLastGame", query="SELECT c FROM ChessGameEntity c WHERE c.id = (SELECT MAX(c.id) FROM ChessGameEntity c") **/
 })
 public class ChessGameEntity {
 

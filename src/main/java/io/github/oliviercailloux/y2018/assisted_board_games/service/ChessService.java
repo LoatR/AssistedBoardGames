@@ -40,7 +40,7 @@ public class ChessService {
 	public List<ChessMoveEntity> getAllMoves() {
 		return em.createQuery(helper.selectAll(ChessMoveEntity.class)).getResultList();
 	}
-	
+	/**
 	@Transactional 
 	public ChessGameEntity getGame(int idGame) {
 		Query q = em.createNamedQuery("ChessGameEntity.find").setParameter("id", idGame); 
@@ -57,7 +57,7 @@ public class ChessService {
 	public ChessGameEntity getLastGame() {		
 		Query q = em.createNamedQuery("ChessGameEntity.getLastGame");
 		return (ChessGameEntity) q.getSingleResult();
-	}	
+	}	**/
 	
 	@Transactional
 	public void persist(ChessGameEntity game) {

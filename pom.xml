@@ -9,7 +9,7 @@
 	<packaging>war</packaging>
 
 	<build>
-		<finalName>mychessgame</finalName>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>

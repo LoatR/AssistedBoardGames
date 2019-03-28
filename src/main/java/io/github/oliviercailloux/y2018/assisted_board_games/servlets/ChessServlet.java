@@ -43,7 +43,7 @@ public class ChessServlet {
 
 	@Inject
 	private ChessService chessService;
-
+/**
 	@GET
 	@Path("game")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -67,7 +67,7 @@ public class ChessServlet {
 		final ChessStateEntity lastState = chessService.getLastState(idGame);
 
 		return lastState.getMoves().get(lastState.getMoves().size() - 1);
-	}
+	}**/
 
 	@POST
 	@Path("move")
