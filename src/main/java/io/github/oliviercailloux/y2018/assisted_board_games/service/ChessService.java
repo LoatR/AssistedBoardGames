@@ -40,24 +40,24 @@ public class ChessService {
 	public List<ChessMoveEntity> getAllMoves() {
 		return em.createQuery(helper.selectAll(ChessMoveEntity.class)).getResultList();
 	}
-	/**
+	
 	@Transactional 
 	public ChessGameEntity getGame(int idGame) {
 		Query q = em.createNamedQuery("ChessGameEntity.find").setParameter("id", idGame); 
 		return (ChessGameEntity) q.getSingleResult();
 	}
-	
+	/**
 	@Transactional
 	public ChessStateEntity getLastState (int idGame) {		
 		Query q = em.createNamedQuery("ChessStateEntity.getLastState").setParameter("gameId", idGame);
 		return (ChessStateEntity) q.getSingleResult();		
 	}
-	
+	**/
 	@Transactional 
-	public ChessGameEntity getLastGame() {		
-		Query q = em.createNamedQuery("ChessGameEntity.getLastGame");
-		return (ChessGameEntity) q.getSingleResult();
-	}	**/
+	public int getLastGameId() {		
+		Query q = em.createNamedQuery("ChessGameEntity.getLastGameId");
+		return  (Integer)q.getSingleResult();
+	}	
 	
 	@Transactional
 	public void persist(ChessGameEntity game) {

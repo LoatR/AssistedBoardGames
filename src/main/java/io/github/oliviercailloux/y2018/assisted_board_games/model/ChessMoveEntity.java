@@ -18,10 +18,11 @@ public class ChessMoveEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id_move;
-	
 	private String  squareFrom ;
 	private String  squareTo ; 
 	
+	@ManyToOne
+	private ChessGameEntity game;
 	@ManyToOne
 	private ChessStateEntity state;
 	
@@ -51,8 +52,8 @@ public class ChessMoveEntity {
 	public void setTo(String to) {
 		this.squareTo = to ;
 	}
-	public void setState(ChessStateEntity state) {
-		this.state=state;
+	public void setGame(ChessGameEntity game) {
+		this.game=game;
 	}
 
 }
